@@ -288,6 +288,16 @@ fieldset,ol,ul
 	padding-right: 30px;
 }
 
+.j_price_table_column_1
+{
+	padding-right: 5px;
+	width: 25%;
+}
+
+.j_price_table_columns
+{
+	width: 25%;
+}
 
 ol,ul{list-style:none}
 html{font-family:ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica Neue,Arial,Noto Sans,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol,Noto Color Emoji;line-height:1.5}
