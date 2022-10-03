@@ -362,6 +362,10 @@ img,video{height:auto;max-width:100%}[hidden]{display:none}*,:after,:before{--tw
 		float: right;
 		width: 55%;
 	}
+	.j_attraction_pic_margin
+	{
+		margin-top: 2em;
+	}
 }
 
 #container {width: 100%;}
