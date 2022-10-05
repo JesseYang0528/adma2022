@@ -341,6 +341,10 @@ img,video{height:auto;max-width:100%}[hidden]{display:none}*,:after,:before{--tw
 		margin-top: 14px;
 		width: 100%;
 	}
+	.j_accom_map
+	{
+		height: 290px;
+	}
 }
 @media (min-width: 640px)
 {
@@ -364,7 +368,11 @@ img,video{height:auto;max-width:100%}[hidden]{display:none}*,:after,:before{--tw
 	}
 	.j_attraction_pic_margin
 	{
-		margin-top: 2em;
+		margin-top: 3em;
+	}
+	.j_accom_map
+	{
+		height: 100%;
 	}
 }
 
