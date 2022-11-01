@@ -299,6 +299,95 @@ fieldset,ol,ul
 	width: 25%;
 }
 
+.j_program_table_line
+{
+	line-height: 30px;
+}
+
+.j_program_table_column_1
+{
+	width: 10%;
+	text-align: center;
+}
+
+.j_program_table_column_other
+{
+	font-size: 13px;
+	line-height: 17px;
+	width: 15%;
+	text-align: center;
+}
+
+.j_detail_table_column_1
+{
+	font-size: 13px;
+	line-height: 17px !important;
+	width: 8%;
+	text-align: center;
+}
+
+.j_detail_table_column_2
+{
+	line-height: 17px !important;
+	font-size: 13px;
+	line-height: 17px;
+	width: 38%;
+	text-align: center;
+}
+
+.j_detail_table_column_other
+{
+	line-height: 17px !important;
+	font-size: 13px;
+	line-height: 17px;
+	width: 23%;
+	text-align: center;
+}
+
+.j_detail_table_column_last
+{
+	line-height: 17px !important;
+	font-size: 13px;
+	line-height: 17px;
+	width: 8%;
+	text-align: center;
+}
+
+.j_detail_table_title
+{
+	font-weight: bold;
+}
+
+.j_table_not_display
+{
+	display: None;
+}
+
+.j_table_display
+{
+	visibility: visible;
+}
+
+.j_bl
+{
+	border-left: 1px solid #818181;
+}
+
+.j_br
+{
+	border-right: 1px solid #818181;
+}
+
+.j_bt
+{
+	border-top: 1px solid #818181;
+}
+
+.j_bb
+{
+	border-bottom: 1px solid #818181;
+}
+
 ol,ul{list-style:none}
 html{font-family:ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica Neue,Arial,Noto Sans,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol,Noto Color Emoji;line-height:1.5}
 body{font-family:inherit;line-height:inherit}*,:after,:before{border:0 solid}hr{border-top-width:1px}
