@@ -367,6 +367,43 @@ fieldset,ol,ul
 	font-weight: bold;
 }
 
+.j_opening_color
+{
+	background-color: #ffccff;
+}
+
+.j_keynote_color
+{
+	background-color: #0067ad;
+	color: white;
+}
+
+.j_session_color
+{
+	background-color: #f2f2f2;
+	font-style: italic; 
+	line-height: 17px;
+}
+
+.j_session_selected_color
+{
+	background-color: orange;
+	box-shadow: inset 0px 0px 20px #424040;
+	/* z-index: 999 !important; */
+	font-style: italic; 
+	line-height: 17px;
+}
+
+.j_workshop_color
+{
+	background-color: #b4c6e7;
+}
+
+.j_cires_color
+{
+	background-color: #ffe699;
+}
+
 .j_info_table_conetnt
 {
 	width: 20%; 

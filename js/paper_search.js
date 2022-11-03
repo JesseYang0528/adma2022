@@ -99,6 +99,8 @@ function get_paper_by_id()
         {
             element = document.getElementById(previous_s);
             element.className += ' j_table_not_display';
+            element = document.getElementById(previous_s + '_table');
+            element.className = 'j_program_table_column_other j_bt j_br j_session_color';
             Previous_s.innerHTML = 'N';
         }
         if (previous_s2 != 'N')
@@ -127,12 +129,14 @@ function get_paper_by_id()
             }
             else
             {
-                element.document.getElementById('info_1');
+                element = document.getElementById('info_1');
                 element.className = 'j_table_not_display';
                 element = document.getElementById('p159_1');
                 element.className += ' j_table_not_display';
                 element = document.getElementById(previous_s2);
                 element.className += ' j_table_not_display';
+                element = document.getElementById(previous_s2 + '_table');
+                element.className = 'j_program_table_column_other j_bt j_br j_session_color';
                 Previous_s2.innerHTML = 'N';
             }
         }
@@ -162,6 +166,9 @@ function get_paper_by_id()
         // element = document.getElementById(paper_id[id][1]);
         // element.className = 'mb-2 font-titleFont text-l text-mainPurple font-extrabold';
         table.className = '';
+        box_id = paper_id[id][1] + '_table';
+        element = document.getElementById(box_id);
+        element.className = 'j_program_table_column_other j_bt j_br j_session_selected_color';
         Previous_pid = document.getElementById('previous_pid');
         Previous_pid.innerHTML = table_id;
         Previous_m = document.getElementById('previous_m');
@@ -173,9 +180,12 @@ function get_paper_by_id()
             element = document.getElementById('info_1');
             element.className = '';
             table_2 = document.getElementById(table_id + '_1');
-            element = document.getElementById(paper_id[id][2]);
-            element.className = 'mb-2 font-titleFont text-l text-mainPurple font-extrabold';
+            // element = document.getElementById(paper_id[id][2]);
+            // element.className = 'mb-2 font-titleFont text-l text-mainPurple font-extrabold';
             table_2.className = '';
+            box_id = paper_id[id][2] + '_table';
+            element = document.getElementById(box_id);
+            element.className = 'j_program_table_column_other j_bt j_br j_session_selected_color';
             Previous_s2 = document.getElementById('previous_s2');
             Previous_s2.innerHTML = paper_id[id][2];
         }
