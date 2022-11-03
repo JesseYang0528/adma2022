@@ -11,7 +11,32 @@ function get_paper_by_id()
                 '1': ['m2', 's8'], '28': ['m2', 's8'], '117': ['m2', 's8'], '153': ['m2', 's8'], '192': ['m2', 's8'], '44': ['m2', 's8'], 
                 '7': ['m2', 's9'], '15': ['m2', 's9'], '124': ['m2', 's9'], '155': ['m2', 's9'], '167': ['m2', 's9'], '161': ['m2', 's9'], 
                 '159': ['m2', 's9', 's10'], '23': ['m2', 's10'], '102': ['m2', 's10'], '141': ['m2', 's10'], '190': ['m2', 's10'], '189': ['m2', 's10'], 
-                '146': ['m2', 's11'], '18': ['m2', 's11'], '83': ['m2', 's11'], '84': ['m2', 's11'], '99': ['m2', 's11'], '114': ['m2', 's11']}
+                '146': ['m2', 's11'], '18': ['m2', 's11'], '83': ['m2', 's11'], '84': ['m2', 's11'], '99': ['m2', 's11'], '114': ['m2', 's11']};
+
+    domains = {'m1': 'Data Mining Theory', 'm2': 'Data Mining Application'};
+    sessions = {'s1': ['Pattern Mining - Dr. Guangdong Bai', '1:30 P.M.', 'Monday 28/11/2022', 'Room 145'], 
+                's2': ['Graph Mining - Dr. Tam Nguyen', '3:30 P.M.', 'Monday 28/11/2022', 'Room 145'], 
+                's3': ['Text Mining - Dr. Miao Xu', '10:30 A.M.', 'Wednesday 30/11/2022', 'Room 145'],
+                's4': ['Image, Multimedia and Time Series Data Mining - Dr. Sen Wang', '10:30 A.M.', 'Tuesday 29/11/2022', 'Room 146'], 
+                's5': ['Classification, Clustering and Recommendation - Assoc. Prof. Guodong Long', '1:30 P.M.', 'Tuesday 29/11/2022', 'Room 145'],
+                's6': ['Multi-objective, Optimization, Augmentation, and Database - Dr. Taotao Cai', '3:30 P.M.', 'Tuesday 29/11/2022', 'Room 145'], 
+                's7': ['Data Mining Theory - Dr. Lin Yue', '10:30 A.M.', 'Tuesday 29/11/2022', 'Room 145'], 
+                's8': ['Finance and Healthcare - Prof. Xue Li', '10:30 A.M.', 'Wednesday 30/11/2022', 'Room 146'], 
+                's9': ['Web and IoT Applications - Assoc. Prof. Jiaxin Li', '1:30 P.M.', 'Wednesday 30/11/2022', 'Room 145'], 
+                's10': ['On-device Application - Dr. Tony Chen', '3:30 P.M.', 'Wednesday 30/11/2022', 'Room 145'],
+                's11': ['Data Mining Application - Prof. Ji Zhang', '3:30 P.M.', 'Wednesday 30/11/2022', 'Room 146']};
+
+    orders = {'22': 1, '26': 2, '97': 3, '125': 4, '164': 5, '122': 6, 
+              '19': 1, '20': 2, '21': 3, '42': 4, '113': 5, '126': 6, '145': 7, 
+              '186': 1, '188': 2, '123': 3, '116': 4, '72': 5, '115': 6, 
+              '32': 1, '120': 2, '175': 3, '150': 4, '160': 5, '169': 6, 
+              '2': 1, '5': 2, '4': 3, '16': 4, '25': 5, '29': 6, '40': 7, '127': 8, 
+              '10': 1, '12': 2, '147': 3, '154': 4, '13': 5, '33': 6, '100': 7, '27': 8, 
+              '144': 1, '148': 2, '158': 3, '165': 4, '170': 5, '185': 6, '9': 7, 
+              '1': 1, '28': 2, '117': 3, '153': 4, '192': 5, '44': 6, 
+              '7': 1, '15': 2, '124': 3, '155': 4, '167': 5, '161': 6, '159': 7, 
+              '23': 2, '102': 3, '141': 4, '190': 5, '189': 6, 
+              '146': 1, '18': 2, '83': 3, '84': 4, '99': 5, '114': 6};
 
     id = document.getElementById('pid').value;
     search_box = document.getElementById('pid');
@@ -19,6 +44,8 @@ function get_paper_by_id()
 
     if (id == 'all')
     {
+        element = document.getElementById('info');
+        element.className = 'j_table_not_display';
         Previous_s2 = document.getElementById('previous_s2');
         Previous_s2.innerHTML = 'all';
         paper_ids = Object.keys(paper_id);
@@ -33,18 +60,20 @@ function get_paper_by_id()
         for (var i = 0; i < ms.length; i++)
         {
             element = document.getElementById(ms[i]);
-            element.className = 'pt-1 mb-5 font-titleFont text-xl text-mainPurple font-extrabold';
+            element.className = 'pt-1 mb-2 font-titleFont text-l text-mainPurple font-extrabold';
         }
         for (var i = 0; i < ss.length; i++)
         {
             element = document.getElementById(ss[i]);
-            element.className = 'pt-1 mb-5 font-titleFont text-l text-mainPurple font-extrabold';
+            element.className = 'mb-2 font-titleFont text-l text-mainPurple font-extrabold';
         }
         return;
     }
 
     if (Object.keys(paper_id).includes(id))
     {
+        element = document.getElementById('info');
+        element.className = '';
         Previous_pid = document.getElementById('previous_pid');
         previous_pid = Previous_pid.innerHTML;
         Previous_m = document.getElementById('previous_m');
@@ -88,16 +117,18 @@ function get_paper_by_id()
                 for (var i = 0; i < ms.length; i++)
                 {
                     element = document.getElementById(ms[i]);
-                    element.className = 'pt-1 mb-5 font-titleFont text-xl text-mainPurple font-extrabold j_table_not_display';
+                    element.className = 'pt-1 mb-2 font-titleFont text-l text-mainPurple font-extrabold j_table_not_display';
                 }
                 for (var i = 0; i < ss.length; i++)
                 {
                     element = document.getElementById(ss[i]);
-                    element.className = 'pt-1 mb-5 font-titleFont text-l text-mainPurple font-extrabold j_table_not_display';
+                    element.className = 'mb-2 font-titleFont text-l text-mainPurple font-extrabold j_table_not_display';
                 }
             }
             else
             {
+                element.document.getElementById('info_1');
+                element.className = 'j_table_not_display';
                 element = document.getElementById('p159_1');
                 element.className += ' j_table_not_display';
                 element = document.getElementById(previous_s2);
@@ -106,12 +137,30 @@ function get_paper_by_id()
             }
         }
         
+        domain_key = paper_id[id][0];
+        session_key = paper_id[id][1];
+        session_info = sessions[session_key];
+        order = orders[id];
+
+        element = document.getElementById('domain');
+        element.innerHTML = domains[domain_key];
+        element = document.getElementById('session');
+        element.innerHTML = session_info[0];
+        element = document.getElementById('time');
+        element.innerHTML = session_info[1];
+        element = document.getElementById('date');
+        element.innerHTML = session_info[2];
+        element = document.getElementById('venue');
+        element.innerHTML = session_info[3] + ' - Priestley Building (67)';
+        element = document.getElementById('order');
+        element.innerHTML = order;
+
         table_id = 'p' + id;
         table = document.getElementById(table_id);
-        element = document.getElementById(paper_id[id][0]);
-        element.className = 'pt-1 mb-5 font-titleFont text-xl text-mainPurple font-extrabold';
-        element = document.getElementById(paper_id[id][1]);
-        element.className = 'pt-1 mb-5 font-titleFont text-l text-mainPurple font-extrabold';
+        // element = document.getElementById(paper_id[id][0]);
+        // element.className = 'pt-1 mb-2 font-titleFont text-l text-mainPurple font-extrabold';
+        // element = document.getElementById(paper_id[id][1]);
+        // element.className = 'mb-2 font-titleFont text-l text-mainPurple font-extrabold';
         table.className = '';
         Previous_pid = document.getElementById('previous_pid');
         Previous_pid.innerHTML = table_id;
@@ -121,9 +170,11 @@ function get_paper_by_id()
         Previous_s.innerHTML = paper_id[id][1];
         if (id == '159')
         {
+            element = document.getElementById('info_1');
+            element.className = '';
             table_2 = document.getElementById(table_id + '_1');
             element = document.getElementById(paper_id[id][2]);
-            element.className = 'pt-1 mb-5 font-titleFont text-l text-mainPurple font-extrabold';
+            element.className = 'mb-2 font-titleFont text-l text-mainPurple font-extrabold';
             table_2.className = '';
             Previous_s2 = document.getElementById('previous_s2');
             Previous_s2.innerHTML = paper_id[id][2];
