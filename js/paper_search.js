@@ -2,12 +2,12 @@ function get_paper_by_id()
 {
 
     paper_id = {'22': ['m1', 's1'], '26': ['m1', 's1'], '97': ['m1', 's1'], '125': ['m1', 's1'], '164': ['m1', 's1'], '122': ['m1', 's1'], 
-                '19': ['m1', 's2'], '20': ['m1', 's2'], '21': ['m1', 's2'], '42': ['m1', 's2'], '113': ['m1', 's2'], '126': ['m1', 's2'], '145': ['m1', 's2'], 
+                '20': ['m1', 's2'], '21': ['m1', 's2'], '42': ['m1', 's2'], '113': ['m1', 's2'], '126': ['m1', 's2'], '145': ['m1', 's2'], '158': ['m1', 's2'],
                 '186': ['m1', 's3'], '188': ['m1', 's3'], '123': ['m1', 's3'], '116': ['m1', 's3'], '72': ['m1', 's3'], '115': ['m1', 's3'], 
                 '32': ['m1', 's4'], '120': ['m1', 's4'], '175': ['m1', 's4'], '150': ['m1', 's4'], '160': ['m1', 's4'], '169': ['m1', 's4'], 
                 '2': ['m1', 's5'], '5': ['m1', 's5'], '4': ['m1', 's5'], '16': ['m1', 's5'], '25': ['m1', 's5'], '29': ['m1', 's5'], '40': ['m1', 's5'], '127': ['m1', 's5'], 
                 '10': ['m1', 's6'], '12': ['m1', 's6'], '147': ['m1', 's6'], '154': ['m1', 's6'], '13': ['m1', 's6'], '33': ['m1', 's6'], '100': ['m1', 's6'], '27': ['m1', 's6'], 
-                '144': ['m1', 's7'], '148': ['m1', 's7'], '158': ['m1', 's7'], '165': ['m1', 's7'], '170': ['m1', 's7'], '185': ['m1', 's7'], '9': ['m1', 's7'], 
+                '144': ['m1', 's7'], '148': ['m1', 's7'], '165': ['m1', 's7'], '170': ['m1', 's7'], '185': ['m1', 's7'], '9': ['m1', 's7'], '19': ['m1', 's7'], 
                 '1': ['m2', 's8'], '28': ['m2', 's8'], '117': ['m2', 's8'], '153': ['m2', 's8'], '192': ['m2', 's8'], '44': ['m2', 's8'], 
                 '7': ['m2', 's9'], '15': ['m2', 's9'], '124': ['m2', 's9'], '155': ['m2', 's9'], '167': ['m2', 's9'], '161': ['m2', 's9'], 
                 '159': ['m2', 's9', 's10'], '23': ['m2', 's10'], '102': ['m2', 's10'], '141': ['m2', 's10'], '190': ['m2', 's10'], '189': ['m2', 's10'], 
@@ -26,13 +26,25 @@ function get_paper_by_id()
                 's10': ['On-device Application - Dr. Tony Chen', '3:30 P.M.', 'Wednesday 30/11/2022', 'Room 145'],
                 's11': ['Data Mining Application - Prof. Ji Zhang', '3:30 P.M.', 'Wednesday 30/11/2022', 'Room 146']};
 
+    // sessions = {'s1': ['Pattern Mining - Dr. Guangdong Bai', '<i style = "color: grey;">TBA</i>', '<i style = "color: grey;">TBA</i>', 'Room 145'], 
+    //             's2': ['Graph Mining - Dr. Tam Nguyen', '<i style = "color: grey;">TBA</i>', '<i style = "color: grey;">TBA</i>', 'Room 145'], 
+    //             's3': ['Text Mining - Dr. Miao Xu', '<i style = "color: grey;">TBA</i>', '<i style = "color: grey;">TBA</i>', 'Room 145'],
+    //             's4': ['Image, Multimedia and Time Series Data Mining - Dr. Sen Wang', '<i style = "color: grey;">TBA</i>', '<i style = "color: grey;">TBA</i>', 'Room 146'], 
+    //             's5': ['Classification, Clustering and Recommendation - Assoc. Prof. Guodong Long', '<i style = "color: grey;">TBA</i>', '<i style = "color: grey;">TBA</i>', 'Room 145'],
+    //             's6': ['Multi-objective, Optimization, Augmentation, and Database - Dr. Taotao Cai', '<i style = "color: grey;">TBA</i>', '<i style = "color: grey;">TBA</i>', 'Room 145'], 
+    //             's7': ['Data Mining Theory - Dr. Lin Yue', '<i style = "color: grey;">TBA</i>', '<i style = "color: grey;">TBA</i>', 'Room 145'], 
+    //             's8': ['Finance and Healthcare - Prof. Xue Li', '<i style = "color: grey;">TBA</i>', '<i style = "color: grey;">TBA</i>', 'Room 146'], 
+    //             's9': ['Web and IoT Applications - Assoc. Prof. Jiaxin Li', '<i style = "color: grey;">TBA</i>', '<i style = "color: grey;">TBA</i>', 'Room 145'], 
+    //             's10': ['On-device Application - Dr. Tony Chen', '<i style = "color: grey;">TBA</i>', '<i style = "color: grey;">TBA</i>', 'Room 145'],
+    //             's11': ['Data Mining Application - Prof. Ji Zhang', '<i style = "color: grey;">TBA</i>', '<i style = "color: grey;">TBA</i>', 'Room 146']};
+
     orders = {'22': 1, '26': 2, '97': 3, '125': 4, '164': 5, '122': 6, 
-              '19': 1, '20': 2, '21': 3, '42': 4, '113': 5, '126': 6, '145': 7, 
+              '20': 1, '21': 2, '42': 3, '113': 4, '126': 5, '145': 6, '158': 7,
               '186': 1, '188': 2, '123': 3, '116': 4, '72': 5, '115': 6, 
               '32': 1, '120': 2, '175': 3, '150': 4, '160': 5, '169': 6, 
               '2': 1, '5': 2, '4': 3, '16': 4, '25': 5, '29': 6, '40': 7, '127': 8, 
               '10': 1, '12': 2, '147': 3, '154': 4, '13': 5, '33': 6, '100': 7, '27': 8, 
-              '144': 1, '148': 2, '158': 3, '165': 4, '170': 5, '185': 6, '9': 7, 
+              '144': 1, '148': 2, '165': 3, '170': 4, '185': 5, '9': 6, '19': 7,
               '1': 1, '28': 2, '117': 3, '153': 4, '192': 5, '44': 6, 
               '7': 1, '15': 2, '124': 3, '155': 4, '167': 5, '161': 6, '159': 7, 
               '23': 2, '102': 3, '141': 4, '190': 5, '189': 6, 
