@@ -318,6 +318,24 @@ fieldset,ol,ul
 	text-align: center;
 }
 
+.j_event_table_column_1
+{
+	padding: 5px;
+	font-size: 13px;
+	line-height: 17px;
+	width: 20%;
+	text-align: center;
+}
+
+.j_event_table_column_other
+{
+	padding: 5px;
+	font-size: 13px;
+	line-height: 17px;
+	width: 40%;
+	text-align: center;
+}
+
 .j_detail_table_column_1
 {
 	font-size: 13px;
