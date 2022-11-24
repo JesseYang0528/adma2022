@@ -27,7 +27,7 @@
         <div class="w-full min-h-screen flex flex-col" data-is-root-path="true">
           <header>
             <nav class="j_navbar j_uq_color_bg">
-              <div class="max-w-7xl mx-auto px-2 sm:px-6 lg:px-12">
+              <div class="max-w-8xl mx-auto px-2 sm:px-6 lg:px-12">
                 <div class="relative flex items-center justify-between h-16">
                   <div class="absolute inset-y-0 left-0 flex items-center md:hidden">
                     <button onclick = 'show_mobile_nav()' type="button" class="py-2 pl-3 pr-3 ml-4 inline-flex items-center justify-center rounded-md  text-gray-50 focus:outline-none focus:ring-1 focus:ring-inset  focus:ring-white" aria-controls="mobile-menu" aria-expanded="false">
@@ -84,6 +84,10 @@
                         <!-- <a aria-current="page" class="flex item-center" title="Camera Ready Guidelines" href="/camera_ready_guidelines.html">
                           <span class=" text-white text-base hover:bg-menuHover px-3 py-2 rounded-md font-medium font-headingStyle">Camera Ready Guidelines</span>
                         </a> -->
+                        <a aria-current="page" class="flex item-center" title="Accepted Papers" href="/accepted_papers.html">
+                          <span class=" text-white text-base hover:bg-menuHover px-3 py-2 rounded-md font-medium font-headingStyle">Accepted Papers</span>
+                        </a>
+
                         <a aria-current="page" class="flex item-center" title="Organisation" href="/organisation.html">
                           <span class=" text-white text-base hover:bg-menuHover px-3 py-2 rounded-md font-medium font-headingStyle">Organisation</span>
                         </a>
@@ -143,6 +147,9 @@
                   </a>
                   <a class="flex item-center w-full" title="Submission Guidelines" href="/submission_guidelines.html">
                     <span class="pl-8 pr-4 py-2 w-full text-white block rounded-md text-base font-semibold font-headingStyle">Submission Guidelines</span>
+                  </a>
+                  <a class="flex item-center w-full" title="Accepted Papers" href="/accepted_papers.html">
+                    <span class="pl-8 pr-4 py-2 w-full text-white block rounded-md text-base font-semibold font-headingStyle">Accepted Papers</span>
                   </a>
                   <a class="flex item-center w-full" title="Organisation" href="/organisation.html">
                     <span class="pl-8 pr-4 py-2 w-full text-white block rounded-md text-base font-semibold font-headingStyle">Organisation</span>
@@ -265,7 +272,7 @@
                         9:30am
                       </td>
                       <td class = 'j_program_table_column_other j_br j_opening_color' colspan = "2" style = 'font-size: 10px !important; line-height: 17px;'>
-                        Prof. Xue: Open Speach, Dr. Tony: Committee Report, Dr. Guangdong: Local Logistic
+                        Prof. Xue: Open Speech, Dr. Tony: Committee Report, Dr. Guangdong: Local Logistic
                       </td>
                       <td class = 'j_program_table_column_other j_br j_keynote_color' colspan = "2">
                         Prof. Hua Wang
@@ -279,7 +286,7 @@
                         &nbsp;
                       </td>
                       <td class = 'j_program_table_column_other j_bt j_br j_keynote_color' colspan = "2">
-                        Keynote I - Chair: Xie Li
+                        Keynote I - Chair: Xue Li
                       </td>
                       <td class = 'j_program_table_column_other j_br j_keynote_color' colspan = "2" style = "font-style: italic;">
                         Room 145 - Priestley Building (67)
@@ -296,7 +303,7 @@
                         Exploring Online Social Networks: Graph Algorithms and Systems
                       </td>
                       <td class = 'j_program_table_column_other j_bt j_br' colspan = "2" style = "font-style: italic;" rowspan = "3">
-                        Moring Tea<br><br>
+                        Morning Tea<br><br>
                         Location TBA
                       </td>
                       <td class = 'j_program_table_column_other j_bt j_br' colspan = "2" style = "font-style: italic;" rowspan = "3">
@@ -328,22 +335,22 @@
                         Morning Tea<br><br>
                         Location TBA
                       </td>
-                      <td id = 's7_table' class = 'j_program_table_column_other j_bt j_br j_session_color' rowspan = "9">
+                      <td id = 's7_table' class = 'j_program_table_column_other j_bt j_br j_session_color' rowspan = "9"  onmouseenter = 'show_pop_up_window("pop_up_s7")' onmousemove = 'show_pop_up_window("pop_up_s7")' onmouseleave = 'hide_pop_up_window("pop_up_s7")'>
                         Data Mining Theory
                         <br><br>
                         Room 145 - Priestley Building (67)
                       </td>
-                      <td id = 's4_table' class = 'j_program_table_column_other j_bt j_br j_session_color' rowspan = "9">
+                      <td id = 's4_table' class = 'j_program_table_column_other j_bt j_br j_session_color' rowspan = "9" onmouseenter = 'show_pop_up_window("pop_up_s4")' onmousemove = 'show_pop_up_window("pop_up_s4")' onmouseleave = 'hide_pop_up_window("pop_up_s4")'>
                         Image, Multimedia and Time Series Data Mining
                         <br><br>
                         Room 146 - Priestley Building (67)
                       </td>
-                      <td id = 's3_table' class = 'j_program_table_column_other j_bt j_br j_session_color' rowspan = "9">
+                      <td id = 's3_table' class = 'j_program_table_column_other j_bt j_br j_session_color' rowspan = "9" onmouseenter = 'show_pop_up_window("pop_up_s3")' onmousemove = 'show_pop_up_window("pop_up_s3")' onmouseleave = 'hide_pop_up_window("pop_up_s3")'>
                         Text Mining
                         <br><br>
                         Room 145 - Priestley Building (67)
                       </td>
-                      <td id = 's8_table' class = 'j_program_table_column_other j_bt j_br j_session_color' rowspan = "9">
+                      <td id = 's8_table' class = 'j_program_table_column_other j_bt j_br j_session_color' rowspan = "9" onmouseenter = 'show_pop_up_window("pop_up_s8")' onmousemove = 'show_pop_up_window("pop_up_s8")' onmouseleave = 'hide_pop_up_window("pop_up_s8")'>
                         Finance and Healthcare
                         <br><br>
                         Room 146 - Priestley Building (67)
@@ -420,37 +427,40 @@
                       <td class = 'j_program_table_column_1 j_bl j_bt j_br'>
                         1:30pm
                       </td>
-                      <td id = 's1_table' class = 'j_program_table_column_other j_bt j_br j_session_color' rowspan = "9">
+                      <td id = 's1_table' style = 'z-index: 999;' class = 'j_program_table_column_other j_bt j_br j_session_color' rowspan = "9" onmouseenter = 'show_pop_up_window("pop_up_s1")' onmousemove = 'show_pop_up_window("pop_up_s1")' onmouseleave = 'hide_pop_up_window("pop_up_s1")'>
                         Pattern Mining
                         <br>
                         Room 145 - Priestley Building (67)
                       </td>
-                      <td class = 'j_program_table_column_other j_bt j_br j_workshop_color' rowspan = "9" style = "font-style: italic; line-height: 17px;">
+                      <td class = 'j_program_table_column_other j_bt j_br j_workshop_color' rowspan = "9" style = "font-style: italic; line-height: 17px; padding-top: 5px; padding-bottom: 5px;">
                         Workshop 1 <br>Room 146 - Priestley Building (67)<br><br>
                         How to Select Shallow and Deep Methods for Anomaly Detection
                         <br><br>
+                        <strong>YE ZHU</strong> (Deakin University)*<br><strong>Guansong Peng</strong> (Singapore Management University)<br><br>
                         <a href = 'https://uqz.zoom.us/j/84311150769' style = 'text-decoration: underline;'><b>Zoom: 84311150769</b><br>Click to Join</a>
                       </td>
-                      <td id = 's5_table' class = 'j_program_table_column_other j_bt j_br j_session_color' rowspan = "9">
+                      <td id = 's5_table' style = 'z-index: 999;' class = 'j_program_table_column_other j_bt j_br j_session_color' rowspan = "9" onmouseenter = 'show_pop_up_window("pop_up_s5")' onmousemove = 'show_pop_up_window("pop_up_s5")' onmouseleave = 'hide_pop_up_window("pop_up_s5")'>
                         Classification, Clustering and Recommendation 
                         <br>
                         Room 145 - Priestley Building (67)
                       </td>
-                      <td class = 'j_program_table_column_other j_bt j_br j_workshop_color' rowspan = "9" style = "font-style: italic; line-height: 17px;">
+                      <td class = 'j_program_table_column_other j_bt j_br j_workshop_color' rowspan = "9" style = "font-style: italic; line-height: 17px; padding-top: 5px; padding-bottom: 5px;">
                         Workshop 3 <br>Room 146 - Priestley Building (67)<br><br>
                         Data Mining Applications in Healthcare and their Implications
                         <br><br>
+                        <strong>Xiaohui Tao</strong> (The University of Southern Queensland)*<br><strong>Yuefeng Li</strong> (Queensland University of Technology)<br><strong>Srinivas Kondalsamy Chennakesavan</strong> (The University of Queensland)<br><br>
                         <a href = 'https://uqz.zoom.us/j/84311150769' style = 'text-decoration: underline;'><b>Zoom: 84311150769</b><br>Click to Join</a>
                       </td>
-                      <td id = 's9_table' class = 'j_program_table_column_other j_bt j_br j_session_color' rowspan = "9">
+                      <td id = 's9_table' style = 'z-index: 999;' class = 'j_program_table_column_other j_bt j_br j_session_color' rowspan = "9" onmouseenter = 'show_pop_up_window("pop_up_s9")' onmousemove = 'show_pop_up_window("pop_up_s9")' onmouseleave = 'hide_pop_up_window("pop_up_s9")'>
                         Web and IoT Applications 
                         <br>
                         Room 145 - Priestley Building (67)
                       </td>
-                      <td class = 'j_program_table_column_other j_bt j_br j_workshop_color' rowspan = "9" style = "font-style: italic; line-height: 17px;">
+                      <td class = 'j_program_table_column_other j_bt j_br j_workshop_color' rowspan = "9" style = "font-style: italic; line-height: 17px; padding-top: 5px; padding-bottom: 5px;">
                         Workshop 5 <br>Room 146 - Priestley Building (67)<br><br>
                         Women in Computer Science
                         <br><br>
+                        <strong>Lin Yue</strong> (University of Newcastle)*<br><strong>Miao Xu</strong> (The University of Queensland)<br><br>
                         <a href = 'https://uqz.zoom.us/j/84311150769' style = 'text-decoration: underline;'><b>Zoom: 84311150769</b><br>Click to Join</a>
                       </td>
                     </tr>
@@ -533,35 +543,37 @@
                       <td class = 'j_program_table_column_1 j_bl j_bt j_br'>
                         3:30pm
                       </td>
-                      <td id = 's2_table' class = 'j_program_table_column_other j_bt j_br j_session_color' rowspan = "9">
+                      <td id = 's2_table' class = 'j_program_table_column_other j_bt j_br j_session_color' rowspan = "9" onmouseenter = 'show_pop_up_window("pop_up_s2")' onmousemove = 'show_pop_up_window("pop_up_s2")' onmouseleave = 'hide_pop_up_window("pop_up_s2")'>
                         Graph Mining
                         <br>
                         Room 145 - Priestley Building (67)
                       </td>
-                      <td class = 'j_program_table_column_other j_bt j_br j_workshop_color' rowspan = "9" style = "font-style: italic; line-height: 17px;">
+                      <td class = 'j_program_table_column_other j_bt j_br j_workshop_color' rowspan = "9" style = "font-style: italic; line-height: 17px; padding-top: 5px; padding-bottom: 5px;">
                         Workshop 2 <br>Room 146 - Priestley Building (67)<br><br>
                         Evolving Subgraph Computation and its Applications
                         <br><br>
+                        <strong>Jianxin Li</strong> (Deakin University)*<br><br>
                         <a href = 'https://uqz.zoom.us/j/84311150769' style = 'text-decoration: underline;'><b>Zoom: 84311150769</b><br>Click to Join</a>
                       </td>
-                      <td id = 's6_table' class = 'j_program_table_column_other j_bt j_br j_session_color' rowspan = "9">
+                      <td id = 's6_table' style = 'z-index: 999;' class = 'j_program_table_column_other j_bt j_br j_session_color' rowspan = "9" onmouseenter = 'show_pop_up_window("pop_up_s6")' onmousemove = 'show_pop_up_window("pop_up_s6")' onmouseleave = 'hide_pop_up_window("pop_up_s6")'>
                         Multi-objective, Optimization, Augmentation, and Database 
                         <br>
                         Room 145 - Priestley Building (67)
                       </td>
-                      <td class = 'j_program_table_column_other j_bt j_br j_workshop_color' rowspan = "9" style = "font-style: italic; line-height: 17px;">
+                      <td class = 'j_program_table_column_other j_bt j_br j_workshop_color' rowspan = "9" style = "font-style: italic; line-height: 17px; padding-top: 5px; padding-bottom: 5px;">
                         Workshop 4 <br>
                         Room 146 - Priestley Building (67)<br><br>
                         Recent Advances and Challenges in Membership Inference Attacks on Machine Learning
                         <br><br>
+                        <strong>Xuyun Zhang</strong> (Macquarie University)*<br><strong>Hongsheng Hu</strong> (Data61, CSIRO)<br><br>
                         <a href = 'https://uqz.zoom.us/j/84311150769' style = 'text-decoration: underline;'><b>Zoom: 84311150769</b><br>Click to Join</a>
                       </td>
-                      <td id = 's10_table' class = 'j_program_table_column_other j_bt j_br j_session_color' rowspan = "9">
+                      <td id = 's10_table' style = 'z-index: 999;' class = 'j_program_table_column_other j_bt j_br j_session_color' rowspan = "9" onmouseenter = 'show_pop_up_window("pop_up_s10")' onmousemove = 'show_pop_up_window("pop_up_s10")' onmouseleave = 'hide_pop_up_window("pop_up_s10")'>
                         On-device Application 
                         <br>
                         Room 145 - Priestley Building (67)
                       </td>
-                      <td id = 's11_table' class = 'j_program_table_column_other j_bt j_br j_session_color' rowspan = "9">
+                      <td id = 's11_table' style = 'z-index: 999;' class = 'j_program_table_column_other j_bt j_br j_session_color' rowspan = "9" onmouseenter = 'show_pop_up_window("pop_up_s11")' onmousemove = 'show_pop_up_window("pop_up_s11")' onmouseleave = 'hide_pop_up_window("pop_up_s11")'>
                         Data ming Applications
                         <br>
                         Room 146 - Priestley Building (67)
@@ -656,11 +668,756 @@
                         9:30pm
                       </td>
                     </tr>
-
                   </tbody>
                 </table>
 
-                <h2 id = 'welcome' class="pt-9 mb-5 font-titleFont text-3xl text-mainPurple font-extrabold">2022 UQ Data Science Discipline End-of-Year Event</h2>
+                <div id = 'pop_up_s1' class = 'j_pop_up j_table_not_display'>
+                  <table cellpadding = '0' style = "border-collapse: collapse; width: 100% !important;">
+                    <tbody>
+                      <tr>
+                        <td style = 'padding: 2px; text-align: center; vertical-align: text-top;' colspan = "2">
+                          <strong>Papers in Pattern Mining Session</strong>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td style = "padding: 2px; padding-right: 10px; vertical-align: text-top;">
+                          <strong>22</strong>
+                        </td>
+                        <td style = 'padding: 2px; vertical-align: text-top;'>
+                          <strong>An Efficient Method for Outlying Aspect Mining based on Genetic Algorithm</strong>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td style = "padding: 2px; padding-right:10px; vertical-align: text-top;">
+                          <strong>26</strong>
+                        </td>
+                        <td style = "padding: 2px; vertical-align: text-top;">
+                          <strong>Effective Mining of Contrast Hybrid Patterns from Nominal-numerical Mixed Data</strong>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td style = "padding: 2px; padding-right:10px; vertical-align: text-top;">
+                          <strong>97</strong>
+                        </td>
+                        <td style = "padding: 2px; vertical-align: text-top;">
+                          <strong>TPFL: Test Input Prioritization for Deep Neural Networks Based on Fault Localization</strong>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td style = "padding: 2px; padding-right:10px; vertical-align: text-top;">
+                          <strong>125</strong>
+                        </td>
+                        <td style = "padding: 2px; vertical-align: text-top;">
+                          <strong>An Association Rule Mining-Based Framework for the Discovery of Anomalous Behavioral Patterns</strong>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td style = "padding: 2px; padding-right:10px; vertical-align: text-top;">
+                          <strong>164</strong>
+                        </td>
+                        <td style = "padding: 2px; vertical-align: text-top;">
+                          <strong>Mining ε-closed high utility co-location patterns from spatial data</strong>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td style = "padding: 2px; padding-right:10px; vertical-align: text-top;">
+                          <strong>122</strong>
+                        </td>
+                        <td style = "padding: 2px; vertical-align: text-top;">
+                          <strong>Mining Maximal Sub-prevalent Co-location patterns based on k-hop</strong>
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+
+                <div id = 'pop_up_s2' class = 'j_pop_up j_table_not_display'>
+                  <table cellpadding = '0' style = "border-collapse: collapse; width: 100% !important;">
+                    <tbody>
+                      <tr>
+                        <td style = 'padding: 2px; text-align: center; vertical-align: text-top;' colspan = "2">
+                          <strong>Papers in Graph Mining Session</strong>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td style = "padding: 2px; padding-right:10px; vertical-align: text-top;">
+                          <strong>20</strong>
+                        </td>
+                        <td style = "padding: 2px; vertical-align: text-top;">
+                          <strong>EvAnGCN: Evolving Graph Deep Neural Network Based Anomaly Detection in Blockchain</strong>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td style = "padding: 2px; padding-right:10px; vertical-align: text-top;">
+                          <strong>21</strong>
+                        </td>
+                        <td style = "padding: 2px; vertical-align: text-top;">
+                          <strong>Deterministic Graph-Walking Program Mining</strong>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td style = "padding: 2px; padding-right:10px; vertical-align: text-top;">
+                          <strong>42</strong>
+                        </td>
+                        <td style = "padding: 2px; vertical-align: text-top;">
+                          <strong>A Benchmarking Evaluation of Graph Neural Networks on Traffic Speed Prediction</strong>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td style = "padding: 2px; padding-right:10px; vertical-align: text-top;">
+                          <strong>113</strong>
+                        </td>
+                        <td style = "padding: 2px; vertical-align: text-top;">
+                          <strong>Multi-view Gated Graph Convolutional Network for Aspect-Level Sentiment Classification</strong>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td style = "padding: 2px; padding-right:10px; vertical-align: text-top;">
+                          <strong>126</strong>
+                        </td>
+                        <td style = "padding: 2px; vertical-align: text-top;">
+                          <strong>Decentralized Graph Processing for Reachability Queries</strong>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td style = "padding: 2px; padding-right:10px; vertical-align: text-top;">
+                          <strong>145</strong>
+                        </td>
+                        <td style = "padding: 2px; vertical-align: text-top;">
+                          <strong>Being Automated or Not? Risk Identification of Occupations with Graph Neural Networks</strong>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td style = "padding: 2px; padding-right:10px; vertical-align: text-top;">
+                          <strong>158</strong>
+                        </td>
+                        <td style = "padding: 2px; vertical-align: text-top;">
+                          <strong>A Distributed SAT-based Framework for Closed Frequent Itemset Mining</strong>
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+
+                <div id = 'pop_up_s3' class = 'j_pop_up j_table_not_display'>
+                  <table cellpadding = '0' style = "border-collapse: collapse; width: 100% !important;">
+                    <tbody>
+                      <tr>
+                        <td style = 'padding: 2px; text-align: center;' colspan = "2">
+                          <strong>Papers in Text Mining Session</strong>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td style = "padding: 2px; padding-right:10px; vertical-align: text-top;">
+                          <strong>186</strong>
+                        </td>
+                        <td style = "padding: 2px; vertical-align: text-top;">
+                          <strong>Towards Idea Mining: Problem-Solution Phrases Extraction from Text</strong>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td style = "padding: 2px; padding-right:10px; vertical-align: text-top;">
+                          <strong>188</strong>
+                        </td>
+                        <td style = "padding: 2px; vertical-align: text-top;">
+                          <strong>Spam Email Categorization with NLP and using Federated Deep Learning</strong>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td style = "padding: 2px; padding-right:10px; vertical-align: text-top;">
+                          <strong>123</strong>
+                        </td>
+                        <td style = "padding: 2px; vertical-align: text-top;">
+                          <strong>SePass: Semantic Password Guessing using k-nn Similarity Search in Word Embeddings</strong>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td style = "padding: 2px; padding-right:10px; vertical-align: text-top;">
+                          <strong>116</strong>
+                        </td>
+                        <td style = "padding: 2px; vertical-align: text-top;">
+                          <strong>DeMRC: Dynamically Enhanced Multi-hop Reading Comprehension Model for Low Data</strong>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td style = "padding: 2px; padding-right:10px; vertical-align: text-top;">
+                          <strong>72</strong>
+                        </td>
+                        <td style = "padding: 2px; vertical-align: text-top;">
+                          <strong>ESTD: Empathy Style Transformer with Discriminative mechanism</strong>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td style = "padding: 2px; padding-right:10px; vertical-align: text-top;">
+                          <strong>115</strong>
+                        </td>
+                        <td style = "padding: 2px; vertical-align: text-top;">
+                          <strong>Detection Method of User Behavior Transition on Computer</strong>
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+
+                <div id = 'pop_up_s4' class = 'j_pop_up j_table_not_display'>
+                  <table cellpadding = '0' style = "border-collapse: collapse; width: 100% !important;">
+                    <tbody>
+                      <tr>
+                        <td style = 'padding: 2px; text-align: center;' colspan = "2">
+                          <strong>Papers in Image, Multimedia and Time Series Data Mining Session</strong>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td style = "padding: 2px; padding-right:10px; vertical-align: text-top;">
+                          <strong>32</strong>
+                        </td>
+                        <td style = "padding: 2px; vertical-align: text-top;">
+                          <strong>Ensemble Image Super-resolution CNNs for Small Data and Diverse Compressive Models</strong>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td style = "padding: 2px; padding-right:10px; vertical-align: text-top;">
+                          <strong>120</strong>
+                        </td>
+                        <td style = "padding: 2px; vertical-align: text-top;">
+                          <strong>Optimizing MobileNetV2 Architecture  Using Split Input and Layer Replications for 3D Face Recognition Task</strong>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td style = "padding: 2px; padding-right:10px; vertical-align: text-top;">
+                          <strong>175</strong>
+                        </td>
+                        <td style = "padding: 2px; vertical-align: text-top;">
+                          <strong>GANs for Automatic Generation of Data Plots</strong>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td style = "padding: 2px; padding-right:10px; vertical-align: text-top;">
+                          <strong>150</strong>
+                        </td>
+                        <td style = "padding: 2px; vertical-align: text-top;">
+                          <strong>An Explainable Approach to Semantic Link Mining in Multi-sourced Dynamic Data</strong>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td style = "padding: 2px; padding-right:10px; vertical-align: text-top;">
+                          <strong>160</strong>
+                        </td>
+                        <td style = "padding: 2px; vertical-align: text-top;">
+                          <strong>Information Mining from Images of Pipeline Based on Knowledge Representation and Reasoning</strong>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td style = "padding: 2px; padding-right:10px; vertical-align: text-top;">
+                          <strong>169</strong>
+                        </td>
+                        <td style = "padding: 2px; vertical-align: text-top;">
+                          <strong>Binary Gravitational Subspace Search  for Outlier Detection in High Dimensional Data Streams</strong>
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+
+                <div id = 'pop_up_s5' class = 'j_pop_up j_table_not_display'>
+                  <table cellpadding = '0' style = "border-collapse: collapse; width: 100% !important;">
+                    <tbody>
+                      <tr>
+                        <td style = 'padding: 2px; text-align: center;' colspan = "2">
+                          <strong>Papers in Classification, Clustering and Recommendation Session</strong>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td style = "padding: 2px; padding-right:10px; vertical-align: text-top;">
+                          <strong>2</strong>
+                        </td>
+                        <td style = "padding: 2px; vertical-align: text-top;">
+                          <strong>Signal Classification using Smooth Coefficients of Multiple Wavelets to Achieve High Accuracy from Compressed Representation of Signal</strong>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td style = "padding: 2px; padding-right:10px; vertical-align: text-top;">
+                          <strong>5</strong>
+                        </td>
+                        <td style = "padding: 2px; vertical-align: text-top;">
+                          <strong>On Reducing the Bias of Random Forest</strong>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td style = "padding: 2px; padding-right:10px; vertical-align: text-top;">
+                          <strong>4</strong>
+                        </td>
+                        <td style = "padding: 2px; vertical-align: text-top;">
+                          <strong>A collaborative filtering recommendation method integrating user profiles</strong>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td style = "padding: 2px; padding-right:10px; vertical-align: text-top;">
+                          <strong>16</strong>
+                        </td>
+                        <td style = "padding: 2px; vertical-align: text-top;">
+                          <strong>A Quality Metric for K-Means Clustering Based on Centroid Locations</strong>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td style = "padding: 2px; padding-right:10px; vertical-align: text-top;">
+                          <strong>25</strong>
+                        </td>
+                        <td style = "padding: 2px; vertical-align: text-top;">
+                          <strong>Clustering Method for Touristic Photographic Spots Recommendation</strong>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td style = "padding: 2px; padding-right:10px; vertical-align: text-top;">
+                          <strong>29</strong>
+                        </td>
+                        <td style = "padding: 2px; vertical-align: text-top;">
+                          <strong>Personalized Federated Learning with Robust Clustering against Model Poisoning</strong>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td style = "padding: 2px; padding-right:10px; vertical-align: text-top;">
+                          <strong>40</strong>
+                        </td>
+                        <td style = "padding: 2px; vertical-align: text-top;">
+                          <strong>A Data-Driven Framework for Driving Style Classification</strong>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td style = "padding: 2px; padding-right:10px; vertical-align: text-top;">
+                          <strong>127</strong>
+                        </td>
+                        <td style = "padding: 2px; vertical-align: text-top;">
+                          <strong>Density Estimation in High-Dimensional Spaces: a Multivariate Histogram Approach</strong>
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+
+                <div id = 'pop_up_s6' class = 'j_pop_up j_table_not_display'>
+                  <table cellpadding = '0' style = "border-collapse: collapse; width: 100% !important;">
+                    <tbody>
+                      <tr>
+                        <td style = 'padding: 2px; text-align: center;' colspan = "2">
+                          <strong>Papers in Multi-objective, Optimization, Augmentation, and Database Session</strong>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td style = "padding: 2px; padding-right:10px; vertical-align: text-top;">
+                          <strong>10</strong>
+                        </td>
+                        <td style = "padding: 2px; vertical-align: text-top;">
+                          <strong>Correcting Temporal Overlaps in Process Models Discovered from OLTP Databases</strong>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td style = "padding: 2px; padding-right:10px; vertical-align: text-top;">
+                          <strong>12</strong>
+                        </td>
+                        <td style = "padding: 2px; vertical-align: text-top;">
+                          <strong>WDA: A Domain-Aware Database Schema Analysis for improving OBDA-based Event Log Extractions</strong>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td style = "padding: 2px; padding-right:10px; vertical-align: text-top;">
+                          <strong>147</strong>
+                        </td>
+                        <td style = "padding: 2px; vertical-align: text-top;">
+                          <strong>A Cricket-based Selection Hyper-heuristic for Many-objective Optimization Problems</strong>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td style = "padding: 2px; padding-right:10px; vertical-align: text-top;">
+                          <strong>154</strong>
+                        </td>
+                        <td style = "padding: 2px; vertical-align: text-top;">
+                          <strong>Multi-Objective Optimization Based Feature Selection Using Correlation </strong>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td style = "padding: 2px; padding-right:10px; vertical-align: text-top;">
+                          <strong>13</strong>
+                        </td>
+                        <td style = "padding: 2px; vertical-align: text-top;">
+                          <strong>SAME: Sampling Attack in Multiplex Network Embedding</strong>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td style = "padding: 2px; padding-right:10px; vertical-align: text-top;">
+                          <strong>33</strong>
+                        </td>
+                        <td style = "padding: 2px; vertical-align: text-top;">
+                          <strong>Cycles Improve Conditional Generators: Synthesis and Augmentation for Data Mining</strong>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td style = "padding: 2px; padding-right:10px; vertical-align: text-top;">
+                          <strong>100</strong>
+                        </td>
+                        <td style = "padding: 2px; vertical-align: text-top;">
+                          <strong>Using the Strongest Adversarial Example to Alleviate Robust Overfitting</strong>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td style = "padding: 2px; padding-right:10px; vertical-align: text-top;">
+                          <strong>27</strong>
+                        </td>
+                        <td style = "padding: 2px; vertical-align: text-top;">
+                          <strong>Deduplication Over Heterogeneous Attribute Types  (D-HAT)</strong>
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+
+                <div id = 'pop_up_s7' class = 'j_pop_up j_table_not_display'>
+                  <table cellpadding = '0' style = "border-collapse: collapse; width: 100% !important;">
+                    <tbody>
+                      <tr>
+                        <td style = 'padding: 2px; text-align: center;' colspan = "2">
+                          <strong>Papers in Data Mining Theory Session</strong>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td style = "padding: 2px; padding-right:10px; vertical-align: text-top;">
+                          <strong>144</strong>
+                        </td>
+                        <td style = "padding: 2px; vertical-align: text-top;">
+                          <strong>Probing Semantic Grounding in Language Models of Code with Representational Similarity Analysis</strong>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td style = "padding: 2px; padding-right:10px; vertical-align: text-top;">
+                          <strong>148</strong>
+                        </td>
+                        <td style = "padding: 2px; vertical-align: text-top;">
+                          <strong>Location Data Anonymization Retaining Data Mining Utilization</strong>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td style = "padding: 2px; padding-right:10px; vertical-align: text-top;">
+                          <strong>165</strong>
+                        </td>
+                        <td style = "padding: 2px; vertical-align: text-top;">
+                          <strong>Index Advisor via DQN with Invalid Action Mask in Tree-Structured Action Space</strong>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td style = "padding: 2px; padding-right:10px; vertical-align: text-top;">
+                          <strong>170</strong>
+                        </td>
+                        <td style = "padding: 2px; vertical-align: text-top;">
+                          <strong>A hybrid model for demand forecasting based on the combination of statistical and machine learning methods</strong>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td style = "padding: 2px; padding-right:10px; vertical-align: text-top;">
+                          <strong>185</strong>
+                        </td>
+                        <td style = "padding: 2px; vertical-align: text-top;">
+                          <strong>A Boosting Algorithm for Training from Only Unlabeled Data</strong>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td style = "padding: 2px; padding-right:10px; vertical-align: text-top;">
+                          <strong>9</strong>
+                        </td>
+                        <td style = "padding: 2px; vertical-align: text-top;">
+                          <strong>A Study of the Effectiveness of Correction Factors for Log Transforms in Ensemble Models</strong>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td style = "padding: 2px; padding-right:10px; vertical-align: text-top;">
+                          <strong>19</strong>
+                        </td>
+                        <td style = "padding: 2px; vertical-align: text-top;">
+                          <strong>Implementation and Analysis of Centroid Displacement based k-Nearest Neighbors</strong>
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+
+                <div id = 'pop_up_s8' class = 'j_pop_up j_table_not_display'>
+                  <table cellpadding = '0' style = "border-collapse: collapse; width: 100% !important;">
+                    <tbody>
+                      <tr>
+                        <td style = 'padding: 2px; text-align: center;' colspan = "2">
+                          <strong>Papers in Finance and Healthcare Session</strong>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td style = "padding: 2px; padding-right:10px; vertical-align: text-top;">
+                          <strong>1</strong>
+                        </td>
+                        <td style = "padding: 2px; vertical-align: text-top;">
+                          <strong>Application of Supplemental Sampling and Interpretable AI in Credit Scoring for Canadian Fintechs: Methods and Case Studies</strong>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td style = "padding: 2px; padding-right:10px; vertical-align: text-top;">
+                          <strong>28</strong>
+                        </td>
+                        <td style = "padding: 2px; vertical-align: text-top;">
+                          <strong>A deep convolutional autoencoder-based approach for Parkinson’s disease diagnosis through speech signals</strong>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td style = "padding: 2px; padding-right:10px; vertical-align: text-top;">
+                          <strong>117</strong>
+                        </td>
+                        <td style = "padding: 2px; vertical-align: text-top;">
+                          <strong>Mining the potential relationships between cancer cases and industrial pollution based on high-influence ordered-pair patterns</strong>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td style = "padding: 2px; padding-right:10px; vertical-align: text-top;">
+                          <strong>153</strong>
+                        </td>
+                        <td style = "padding: 2px; vertical-align: text-top;">
+                          <strong>Finding Hidden Relationships Between Medical Concepts By Leveraging Metamap And Text Mining Techniques</strong>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td style = "padding: 2px; padding-right:10px; vertical-align: text-top;">
+                          <strong>192</strong>
+                        </td>
+                        <td style = "padding: 2px; vertical-align: text-top;">
+                          <strong>Causality discovery based on combined causes and multiple causes in drug-drug interaction</strong>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td style = "padding: 2px; padding-right:10px; vertical-align: text-top;">
+                          <strong>44</strong>
+                        </td>
+                        <td style = "padding: 2px; vertical-align: text-top;">
+                          <strong>An Integrated Medical Recommendation Mechanism Combining Promote Product Singular Value Decomposition and Knowledge Graph</strong>
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+
+                <div id = 'pop_up_s9' class = 'j_pop_up j_table_not_display'>
+                  <table cellpadding = '0' style = "border-collapse: collapse; width: 100% !important;">
+                    <tbody>
+                      <tr>
+                        <td style = 'padding: 2px; text-align: center;' colspan = "2">
+                          <strong>Papers in Web and IoT Applications Session</strong>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td style = "padding: 2px; padding-right:10px; vertical-align: text-top;">
+                          <strong>7</strong>
+                        </td>
+                        <td style = "padding: 2px; vertical-align: text-top;">
+                          <strong>Joint extraction of entities and relations in the news domain</strong>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td style = "padding: 2px; padding-right:10px; vertical-align: text-top;">
+                          <strong>15</strong>
+                        </td>
+                        <td style = "padding: 2px; vertical-align: text-top;">
+                          <strong>Event Detection from Web Data in Chinese Based on Bi-LSTM with Attention</strong>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td style = "padding: 2px; padding-right:10px; vertical-align: text-top;">
+                          <strong>124</strong>
+                        </td>
+                        <td style = "padding: 2px; vertical-align: text-top;">
+                          <strong>Cyber Attack Detection in IoT Networks with Small Samples: Implementation and Analysis</strong>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td style = "padding: 2px; padding-right:10px; vertical-align: text-top;">
+                          <strong>155</strong>
+                        </td>
+                        <td style = "padding: 2px; vertical-align: text-top;">
+                          <strong>SATB: A Testbed of IoT-based Smart Agriculture Network for Dataset Generation</strong>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td style = "padding: 2px; padding-right:10px; vertical-align: text-top;">
+                          <strong>167</strong>
+                        </td>
+                        <td style = "padding: 2px; vertical-align: text-top;">
+                          <strong>An overview on reducing social networks' size</strong>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td style = "padding: 2px; padding-right:10px; vertical-align: text-top;">
+                          <strong>161</strong>
+                        </td>
+                        <td style = "padding: 2px; vertical-align: text-top;">
+                          <strong>AuCM: Course Map Data Analytics for Australian IT Programs in Higher Education</strong>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td style = "padding: 2px; padding-right:10px; vertical-align: text-top;">
+                          <strong>159</strong>
+                        </td>
+                        <td style = "padding: 2px; vertical-align: text-top;">
+                          <strong>Profit Maximization using Social Networks in Two-Phase Setting</strong>
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+
+                <div id = 'pop_up_s10' class = 'j_pop_up j_table_not_display'>
+                  <table cellpadding = '0' style = "border-collapse: collapse; width: 100% !important;">
+                    <tbody>
+                      <tr>
+                        <td style = 'padding: 2px; text-align: center;' colspan = "2">
+                          <strong>Papers in On-device Application Session</strong>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td style = "padding: 2px; padding-right:10px; vertical-align: text-top;">
+                          <strong>23</strong>
+                        </td>
+                        <td style = "padding: 2px; vertical-align: text-top;">
+                          <strong>SESA: Fast Trajectory Compression Method Using Sub-trajectories Segmented by Stay Areas</strong>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td style = "padding: 2px; padding-right:10px; vertical-align: text-top;">
+                          <strong>102</strong>
+                        </td>
+                        <td style = "padding: 2px; vertical-align: text-top;">
+                          <strong>Android Malware Detection Based on Stacking and Multi-feature Fusion</strong>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td style = "padding: 2px; padding-right:10px; vertical-align: text-top;">
+                          <strong>141</strong>
+                        </td>
+                        <td style = "padding: 2px; vertical-align: text-top;">
+                          <strong>Influential Billboard Slot Selection using Pruned Submodularity Graph</strong>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td style = "padding: 2px; padding-right:10px; vertical-align: text-top;">
+                          <strong>190</strong>
+                        </td>
+                        <td style = "padding: 2px; vertical-align: text-top;">
+                          <strong>Quantifying Association Between Street-Level Urban Features and Crime Distribution Around Manhattan Subway Entrances</strong>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td style = "padding: 2px; padding-right:10px; vertical-align: text-top;">
+                          <strong>189</strong>
+                        </td>
+                        <td style = "padding: 2px; vertical-align: text-top;">
+                          <strong>The coherence and divergence between the objective and subjective measurements of street perceptions for Shanghai</strong>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td style = "padding: 2px; padding-right:10px; vertical-align: text-top;">
+                          <strong>159</strong>
+                        </td>
+                        <td style = "padding: 2px; vertical-align: text-top;">
+                          <strong>Profit Maximization using Social Networks in Two-Phase Setting</strong>
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+
+                <div id = 'pop_up_s11' class = 'j_pop_up j_table_not_display'>
+                  <table cellpadding = '0' style = "border-collapse: collapse; width: 100% !important;">
+                    <tbody>
+                      <tr>
+                        <td style = 'padding: 2px; text-align: center;' colspan = "2">
+                          <strong>Papers in Data ming Applications Session</strong>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td style = "padding: 2px; padding-right:10px; vertical-align: text-top;">
+                          <strong>146</strong>
+                        </td>
+                        <td style = "padding: 2px; vertical-align: text-top;">
+                          <strong>A Comparative Study of Question Answering over Knowledge Bases</strong>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td style = "padding: 2px; padding-right:10px; vertical-align: text-top;">
+                          <strong>18</strong>
+                        </td>
+                        <td style = "padding: 2px; vertical-align: text-top;">
+                          <strong>A Deep Learning Framework for Removing Bias from Single-Photon Emission Computerized Tomography</strong>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td style = "padding: 2px; padding-right:10px; vertical-align: text-top;">
+                          <strong>83</strong>
+                        </td>
+                        <td style = "padding: 2px; vertical-align: text-top;">
+                          <strong>Popularity Forecasting for Emerging Research Topics at its Early Stage of Evolution</strong>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td style = "padding: 2px; padding-right:10px; vertical-align: text-top;">
+                          <strong>84</strong>
+                        </td>
+                        <td style = "padding: 2px; vertical-align: text-top;">
+                          <strong>Positive Unlabeled Learning by Sample Selection and Prototype Refinement</strong>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td style = "padding: 2px; padding-right:10px; vertical-align: text-top;">
+                          <strong>99</strong>
+                        </td>
+                        <td style = "padding: 2px; vertical-align: text-top;">
+                          <strong>Handling missing data with Markov boundary</strong>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td style = "padding: 2px; padding-right:10px; vertical-align: text-top;">
+                          <strong>114</strong>
+                        </td>
+                        <td style = "padding: 2px; vertical-align: text-top;">
+                          <strong>Sentiment Analysis of Tweets using Deep Learning</strong>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td style = "padding: 2px; padding-right:10px; vertical-align: text-top;">
+                          <strong>173</strong>
+                        </td>
+                        <td style = "padding: 2px; vertical-align: text-top;">
+                          <strong>Multidimensional Adaptative kNN Over Tracking Outliers (Makoto)</strong>
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+
+                <!-- <div id = 'pop_up_s1' class = 'j_pop_up j_table_not_display'>
+                  <table cellpadding = '0' style = "border-collapse: collapse; width: 100% !important;">
+                    <tbody>
+                      <tr>
+                        <td style = 'padding: 2px; text-align: center;' rowspan = "2">
+                          <strong>Papers in  Session</strong>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td style = "padding: 2px; padding-right:10px;">
+                          <strong>id</strong>
+                        </td>
+                        <td style = "padding: 2px; vertical-align: text-top;">
+                          <strong>title</strong>
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div> -->
+
+                <h2 id = 'welcome' class="pt-9 mb-5 font-titleFont text-3xl text-mainPurple font-extrabold">UQ Data Science End-of-Year Presentations (Optional)</h2>
+                <p class = 'text-xl'>All ADMA attendees are welcome to attend the End-of-Year research seminar hosted by the Data Science Discpline, The University of Queensland.</p>
+                <p class = 'text-xl'>Date: Thursday 1/12/2022</p>
                 <p class = 'text-xl'>Location: 46-342/343, UQ St Lucia Campus</p>
                 <table cellpadding = '0' style = "border-collapse: collapse; width: 100% !important;">
                   <tbody>

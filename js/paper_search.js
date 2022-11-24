@@ -207,3 +207,72 @@ function get_paper_by_id()
         alert ('Sorry. Cannot find any information about paper with ID ' + String(id) + '.');
     }
 }
+
+function show_pop_up_window(id)
+{
+    var pop_up = document.getElementById(id);
+    var screen_width = window.outerWidth;
+    var screen_height = window.outerHeight;
+    var mouse_x = 0;
+    var mouse_y = 0;
+    var indipendent_x = 0;
+    var indipendent_y = 0;
+    var pop_up_width = pop_up.clientWidth;
+    var pop_up_height = pop_up.clientHeight;
+    var event = event || window.event;
+    indipendent_x = event.screenX;
+    indipendent_y = event.screenY;
+    if (event.pageX || event.pageY)
+    {
+        mouse_x = event.pageX;
+        mouse_y = event.pageY;
+    }
+    else if (event.clientX || event.clientY)
+    {
+        mouse_x = event.clientX + document.documentElement.scrollLeft + document.body.scrollLeft;
+        mouse_y = event.clientY + document.documentElement.scrollTop + document.body.scrollTop;
+    }
+    // have enough place on right
+    // if (mouse_x < screen_width / 2)
+    // {
+    //     pop_up.style.left = (mouse_x + 20) + 'px';
+    //     if (- indipendent_y >= pop_up_height)
+    //     {
+    //         pop_up.style.top = (mouse_y - 5) + 'px';
+    //     }
+    //     else
+    //     {
+    //         pop_up.style.top = (mouse_y + 5 - pop_up_height - indipendent_y) + 'px';
+    //     }
+    // }
+    // // not enough place on right
+    // else
+    // {
+    //     pop_up.style.left = (mouse_x - 20 - pop_up_width) + 'px';
+    //     if (- indipendent_y >= pop_up_height)
+    //     {
+    //         pop_up.style.top = (mouse_y - 5) + 'px';
+    //     }
+    //     else
+    //     {
+    //         pop_up.style.top = (mouse_y + 5 - pop_up_height - indipendent_y) + 'px';
+    //     }
+    // }
+    pop_up.style.left = (mouse_x + 20) + 'px';
+    if (- indipendent_y >= pop_up_height)
+    {
+        pop_up.style.top = (mouse_y - 5) + 'px';
+    }
+    else
+    {
+        pop_up.style.top = (mouse_y + 5 - pop_up_height - indipendent_y) + 'px';
+    }
+    pop_up.className = 'j_pop_up'
+}
+
+function hide_pop_up_window(id)
+{
+    console.log('out')
+    pop_up = document.getElementById(id);
+    pop_up.className = 'j_table_not_display j_pop_up';
+}
