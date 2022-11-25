@@ -15,16 +15,16 @@ function get_paper_by_id()
 
     domains = {'m1': 'Data Mining Theory', 'm2': 'Data Mining Application'};
     sessions = {'s1': ['Pattern Mining - Dr. Guangdong Bai', '1:30 P.M.', 'Monday 28/11/2022', 'Room 145'], 
-                's2': ['Graph Mining - Dr. Tam Nguyen', '3:30 P.M.', 'Monday 28/11/2022', 'Room 145'], 
+                's2': ['Graph Mining - A/Prof. Guodong Long', '3:30 P.M.', 'Monday 28/11/2022', 'Room 145'], 
                 's3': ['Text Mining - Dr. Miao Xu', '10:30 A.M.', 'Wednesday 30/11/2022', 'Room 145'],
-                's4': ['Image, Multimedia and Time Series Data Mining - Dr. Sen Wang', '10:30 A.M.', 'Tuesday 29/11/2022', 'Room 146'], 
-                's5': ['Classification, Clustering and Recommendation - Assoc. Prof. Guodong Long', '1:30 P.M.', 'Tuesday 29/11/2022', 'Room 145'],
+                's4': ['Image, Multimedia and Time Series Data Mining - Dr. Zhi Chen', '10:30 A.M.', 'Tuesday 29/11/2022', 'Room 146'], 
+                's5': ['Classification, Clustering and Recommendation - Dr. Ruihong Qiu', '1:30 P.M.', 'Tuesday 29/11/2022', 'Room 145'],
                 's6': ['Multi-objective, Optimization, Augmentation, and Database - Dr. Taotao Cai', '3:30 P.M.', 'Tuesday 29/11/2022', 'Room 145'], 
                 's7': ['Data Mining Theory - Dr. Lin Yue', '10:30 A.M.', 'Tuesday 29/11/2022', 'Room 145'], 
-                's8': ['Finance and Healthcare - Prof. Xue Li', '10:30 A.M.', 'Wednesday 30/11/2022', 'Room 146'], 
+                's8': ['Finance and Healthcare - Prof. Xue Li / Prof. Gong Hao', '10:30 A.M.', 'Wednesday 30/11/2022', 'Room 146'], 
                 's9': ['Web and IoT Applications - Assoc. Prof. Jiaxin Li', '1:30 P.M.', 'Wednesday 30/11/2022', 'Room 145'], 
                 's10': ['On-device Application - Dr. Tony Chen', '3:30 P.M.', 'Wednesday 30/11/2022', 'Room 145'],
-                's11': ['Data Mining Application - Prof. Ji Zhang', '3:30 P.M.', 'Wednesday 30/11/2022', 'Room 146']};
+                's11': ['Data Mining Application - A/Prof. Hongzhi Yin', '3:30 P.M.', 'Wednesday 30/11/2022', 'Room 146']};
 
     // sessions = {'s1': ['Pattern Mining - Dr. Guangdong Bai', '<i style = "color: grey;">TBA</i>', '<i style = "color: grey;">TBA</i>', 'Room 145'], 
     //             's2': ['Graph Mining - Dr. Tam Nguyen', '<i style = "color: grey;">TBA</i>', '<i style = "color: grey;">TBA</i>', 'Room 145'], 
@@ -210,9 +210,18 @@ function get_paper_by_id()
 
 function show_pop_up_window(id)
 {
+    var window_default_height = {'pop_up_s1': 320, 'pop_up_s2': 372, 'pop_up_s3': 296,
+                                 'pop_up_s4': 368, 'pop_up_s5': 376, 'pop_up_s6': 400,
+                                 'pop_up_s7': 396, 'pop_up_s8': 392, 'pop_up_s9': 372,
+                                 'pop_up_s10': 320, 'pop_up_s11': 324};
+
+    var window_default_width = {'pop_up_s1': 650, 'pop_up_s2': 650, 'pop_up_s3': 650,
+                                 'pop_up_s4': 650, 'pop_up_s5': 650, 'pop_up_s6': 650,
+                                 'pop_up_s7': 650, 'pop_up_s8': 650, 'pop_up_s9': 650,
+                                 'pop_up_s10': 650, 'pop_up_s11': 650}
     var pop_up = document.getElementById(id);
-    var screen_width = window.outerWidth;
-    var screen_height = window.outerHeight;
+    var screen_width = window.innerWidth;
+    var screen_height = window.innerHeight;
     var mouse_x = 0;
     var mouse_y = 0;
     var indipendent_x = 0;
@@ -222,6 +231,7 @@ function show_pop_up_window(id)
     var event = event || window.event;
     indipendent_x = event.screenX;
     indipendent_y = event.screenY;
+
     if (event.pageX || event.pageY)
     {
         mouse_x = event.pageX;
@@ -233,46 +243,44 @@ function show_pop_up_window(id)
         mouse_y = event.clientY + document.documentElement.scrollTop + document.body.scrollTop;
     }
     // have enough place on right
-    // if (mouse_x < screen_width / 2)
-    // {
-    //     pop_up.style.left = (mouse_x + 20) + 'px';
-    //     if (- indipendent_y >= pop_up_height)
-    //     {
-    //         pop_up.style.top = (mouse_y - 5) + 'px';
-    //     }
-    //     else
-    //     {
-    //         pop_up.style.top = (mouse_y + 5 - pop_up_height - indipendent_y) + 'px';
-    //     }
-    // }
-    // // not enough place on right
-    // else
-    // {
-    //     pop_up.style.left = (mouse_x - 20 - pop_up_width) + 'px';
-    //     if (- indipendent_y >= pop_up_height)
-    //     {
-    //         pop_up.style.top = (mouse_y - 5) + 'px';
-    //     }
-    //     else
-    //     {
-    //         pop_up.style.top = (mouse_y + 5 - pop_up_height - indipendent_y) + 'px';
-    //     }
-    // }
-    pop_up.style.left = (mouse_x + 20) + 'px';
-    if (- indipendent_y >= pop_up_height)
+    if (mouse_x < screen_width / 2)
     {
-        pop_up.style.top = (mouse_y - 5) + 'px';
+        pop_up.style.left = (mouse_x + 10) + 'px';
+        if (indipendent_y < 0)
+        {
+            indipendent_y = window_default_height + indipendent_y;
+        }
+        if (screen_height - indipendent_y >= window_default_height[id])
+        {
+            pop_up.style.top = (mouse_y + 10) + 'px';
+        }
+        else
+        {
+            pop_up.style.top = (mouse_y - 10 - pop_up_height) + 'px';
+        }
     }
+    // not enough place on right
     else
     {
-        pop_up.style.top = (mouse_y + 5 - pop_up_height - indipendent_y) + 'px';
+        pop_up.style.left = (mouse_x - 10 - window_default_width[id]) + 'px';
+        if (indipendent_y < 0)
+        {
+            indipendent_y = window_default_height + indipendent_y;
+        }
+        if (screen_height - indipendent_y >= window_default_height[id])
+        {
+            pop_up.style.top = (mouse_y + 10) + 'px';
+        }
+        else
+        {
+            pop_up.style.top = (mouse_y - 10 - window_default_height[id]) + 'px';
+        }
     }
-    pop_up.className = 'j_pop_up'
+    pop_up.className = 'j_pop_up j_uq_color_bg';
 }
 
 function hide_pop_up_window(id)
 {
-    console.log('out')
     pop_up = document.getElementById(id);
-    pop_up.className = 'j_table_not_display j_pop_up';
+    pop_up.className = 'j_table_not_display j_pop_up j_uq_color_bg';
 }

@@ -470,13 +470,15 @@ fieldset,ol,ul
 	width: auto; 
 	height: auto; 
 	padding: 10px; 
-	position: absolute; 
+	position: absolute;
 	z-index: 999; 
-	background-color: #00ffff;
+	/* background-color: #00ffff; */
+	background-image:linear-gradient(90deg,#51247a,#56247a 60%,#61257d 80%,#962a8b);
 	border-radius: 10px;
 	box-shadow: 5px 5px 10px grey;
 	max-width: 650px;
 	vertical-align: text-top;
+	color: white;
 }
 
 ol,ul{list-style:none}
