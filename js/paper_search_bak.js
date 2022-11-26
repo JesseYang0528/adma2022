@@ -208,7 +208,7 @@ function get_paper_by_id()
     }
 }
 
-function show_pop_up_window(id, mode = 0)
+function show_pop_up_window(id)
 {
     var window_default_height = {'pop_up_s1': 320, 'pop_up_s2': 372, 'pop_up_s3': 296,
                                  'pop_up_s4': 368, 'pop_up_s5': 376, 'pop_up_s6': 400,
@@ -246,57 +246,35 @@ function show_pop_up_window(id, mode = 0)
     if (mouse_x < screen_width / 2)
     {
         pop_up.style.left = (mouse_x + 10) + 'px';
-        if (mode == 0)
+        if (indipendent_y < 0)
         {
-            if (screen_height - mouse_y + document.documentElement.scrollTop + document.body.scrollTop - 10 >= window_default_height[id])
-            {
-                pop_up.style.top = (mouse_y + 10) + 'px';
-            }
-            else
-            {
-                pop_up.style.top = (screen_height - pop_up_height + document.documentElement.scrollTop + document.body.scrollTop) + 'px';
-            }
+            indipendent_y = window_default_height + indipendent_y;
         }
-        if (mode == 1)
+        if (screen_height - indipendent_y >= window_default_height[id])
         {
-            if (screen_height - mouse_y + document.documentElement.scrollTop + document.body.scrollTop - 10 >= pop_up_height)
-            {
-                pop_up.style.top = (mouse_y + 10) + 'px';
-            }
-            else
-            {
-                pop_up.style.top = (screen_height - pop_up_height + document.documentElement.scrollTop + document.body.scrollTop) + 'px';
-            }
+            pop_up.style.top = (mouse_y + 10) + 'px';
         }
-            
+        else
+        {
+            pop_up.style.top = (mouse_y - 10 - pop_up_height) + 'px';
+        }
     }
     // not enough place on right
     else
     {
         pop_up.style.left = (mouse_x - 10 - window_default_width[id]) + 'px';
-        if (mode == 0)
+        if (indipendent_y < 0)
         {
-            if (screen_height - mouse_y + document.documentElement.scrollTop + document.body.scrollTop - 10 >= window_default_height[id])
-            {
-                pop_up.style.top = (mouse_y + 10) + 'px';
-            }
-            else
-            {
-                pop_up.style.top = (screen_height - window_default_height[id] + document.documentElement.scrollTop + document.body.scrollTop) + 'px';
-            }
+            indipendent_y = window_default_height + indipendent_y;
+        }
+        if (screen_height - indipendent_y >= window_default_height[id])
+        {
+            pop_up.style.top = (mouse_y + 10) + 'px';
         }
         else
         {
-            if (screen_height - mouse_y + document.documentElement.scrollTop + document.body.scrollTop - 10 >= pop_up_height)
-            {
-                pop_up.style.top = (mouse_y + 10) + 'px';
-            }
-            else
-            {
-                pop_up.style.top = (screen_height - pop_up_height + document.documentElement.scrollTop + document.body.scrollTop) + 'px';
-            }
+            pop_up.style.top = (mouse_y - 10 - window_default_height[id]) + 'px';
         }
-            
     }
     pop_up.className = 'j_pop_up j_uq_color_bg';
 }

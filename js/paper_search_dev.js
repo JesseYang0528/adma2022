@@ -259,6 +259,10 @@ function show_pop_up_window(id, mode = 0)
         }
         if (mode == 1)
         {
+            console.log('screen height: ', screen_height);
+            console.log('mouse_y: ', mouse_y);
+            console.log('corrected mouse_y: ', mouse_y - document.documentElement.scrollTop - document.body.scrollTop);
+            console.log('pop_up_height: ', pop_up_height);
             if (screen_height - mouse_y + document.documentElement.scrollTop + document.body.scrollTop - 10 >= pop_up_height)
             {
                 pop_up.style.top = (mouse_y + 10) + 'px';
