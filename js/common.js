@@ -306,3 +306,19 @@ function hide_pop_up_window(id)
     pop_up = document.getElementById(id);
     pop_up.className = 'j_table_not_display j_pop_up j_uq_color_bg';
 }
+
+function mobile_menu_shift(key)
+{
+    var section_1 = document.getElementById('mobile_menu_section_1');
+    var section_2 = document.getElementById('mobile_menu_section_2');
+    if (key == 1)
+    {
+        section_1.setAttribute('style', 'display: none;');
+        section_2.setAttribute('style', 'visibility: visible;');
+    }
+    else
+    {
+        section_1.setAttribute('style', 'visibility: visible;');
+        section_2.setAttribute('style', 'display: none;');
+    }
+}

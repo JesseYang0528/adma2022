@@ -18,6 +18,7 @@
       e&&document.body.addEventListener("load",(function(e){if(void 0===e.target.dataset.mainImage)return;if(void 0===e.target.dataset.gatsbyImageSsr)return;const t=e.target;let a=null,n=t;for(;null===a&&n;)void 0!==n.parentNode.dataset.gatsbyImageWrapper&&(a=n.parentNode),n=n.parentNode;const o=a.querySelector("[data-placeholder-image]"),r=new Image;r.src=t.currentSrc,r.decode().catch((()=>{})).then((()=>{t.style.opacity=1,o&&(o.style.opacity=0,o.style.transition="opacity 500ms linear")}))}),!0);
     </script>
     <meta name="theme-color" content="#51247a"/>
+    <script type = "text/javascript" src = './js/common.js'></script>
     <title data-react-helmet="true">ADMA 2022 - Brisbane, Australia</title>
   </head>
   <body>
@@ -26,7 +27,7 @@
         <div class="w-full min-h-screen flex flex-col" data-is-root-path="true">
           <header>
             <nav class="j_navbar j_uq_color_bg">
-              <div class="max-w-8xl mx-auto px-2 sm:px-6 lg:px-12">
+              <div class="max-w-9xl mx-auto px-2 sm:px-6 lg:px-12">
                 <div class="relative flex items-center justify-between h-16">
                   <div class="absolute inset-y-0 left-0 flex items-center md:hidden">
                     <button onclick = 'show_mobile_nav()' type="button" class="py-2 pl-3 pr-3 ml-4 inline-flex items-center justify-center rounded-md  text-gray-50 focus:outline-none focus:ring-1 focus:ring-inset  focus:ring-white" aria-controls="mobile-menu" aria-expanded="false">
@@ -129,6 +130,9 @@
                         <a aria-current="page" class="flex item-center" title="Speakers" href="/keynote_speakers.html">
                           <span class=" text-white text-base hover:bg-menuHover px-3 py-2 rounded-md font-medium font-headingStyle">Speakers</span>
                         </a>
+                        <a aria-current="page" class="flex item-center" title="Speakers" href="/highlights.html">
+                          <span class=" text-white text-base hover:bg-menuHover px-3 py-2 rounded-md font-medium font-headingStyle">Highlights</span>
+                        </a>
                         <a aria-current="page" class="flex item-center" title="Previous ADMA" href="/previous_adma.html">
                           <span class=" text-white text-base hover:bg-menuHover px-3 py-2 rounded-md font-medium font-headingStyle">Previous ADMA</span>
                         </a>
@@ -139,7 +143,7 @@
               </div>
 
               <div class="hidden" id="mobile_menu">
-                <div class="px-2 pt-2 pb-3 space-y-1">
+                <div id = 'mobile_menu_section_1' class="px-2 pt-2 pb-3 space-y-1" style = 'visibility: visible;'>
                   <a aria-current="page" class="flex item-center w-full" title="Home" href="/">
                     <span class="pl-8 pr-4 py-2 w-full text-white block rounded-md text-base font-semibold font-headingStyle">Home</span>
                   </a>
@@ -153,13 +157,13 @@
                     <span class="pl-8 pr-4 py-2 w-full text-white bg-menuSelected block rounded-md text-base font-semibold font-headingStyle">Call for Workshops and Tutorials</span>
                   </a>
                   <a class="flex item-center w-full" title="Camera Ready Guidelines" href="/camera_ready_guidelines.html">
-                    <span class="pl-8 pr-4 py-2 w-full text-white  block rounded-md text-base font-semibold font-headingStyle">Camera Ready Guidelines</span>
+                    <span class="pl-8 pr-4 py-2 w-full text-white block rounded-md text-base font-semibold font-headingStyle">Camera Ready Guidelines</span>
                   </a>
                   <a class="flex item-center w-full" title="Presentation Guidelines" href="/presentation_guideline.html">
                     <span class="pl-8 pr-4 py-2 w-full text-white block rounded-md text-base font-semibold font-headingStyle">Presentation Guidelines</span>
                   </a>
                   <a class="flex item-center w-full" title="Submission Guidelines" href="/submission_guidelines.html">
-                    <span class="pl-8 pr-4 py-2 w-full text-white  block rounded-md text-base font-semibold font-headingStyle">Submission Guidelines</span>
+                    <span class="pl-8 pr-4 py-2 w-full text-white block rounded-md text-base font-semibold font-headingStyle">Submission Guidelines</span>
                   </a>
                   <a class="flex item-center w-full" title="Accepted Papers" href="/accepted_papers_oral.html">
                     <span class="pl-8 pr-4 py-2 w-full text-white block rounded-md text-base font-semibold font-headingStyle">Oral Presentation Papers</span>
@@ -168,7 +172,15 @@
                     <span class="pl-8 pr-4 py-2 w-full text-white block rounded-md text-base font-semibold font-headingStyle">Poster Presentation Papers</span>
                   </a>
                   <a class="flex item-center w-full" title="Organisation" href="/organisation.html">
-                    <span class="pl-8 pr-4 py-2 w-full text-white  block rounded-md text-base font-semibold font-headingStyle">Organisation</span>
+                    <span class="pl-8 pr-4 py-2 w-full text-white block rounded-md text-base font-semibold font-headingStyle">Organisation</span>
+                  </a>
+                  <a class="flex item-center w-full" title="more" onclick = 'mobile_menu_shift(1)'>
+                    <span class="pl-8 pr-4 py-2 w-full text-white block rounded-md text-base font-semibold font-headingStyle">More...</span>
+                  </a>
+                </div>
+                <div id = 'mobile_menu_section_2' class="px-2 pt-2 pb-3 space-y-1" style = 'display: none;'>
+                  <a aria-current="page" class="flex item-center w-full" title="Home" href="/">
+                    <span class="pl-8 pr-4 py-2 w-full text-white block rounded-md text-base font-semibold font-headingStyle">Home</span>
                   </a>
                   <a class="flex item-center w-full" title="Registration Guidelines" href="/registration_guidelines.html">
                     <span class="pl-8 pr-4 py-2 w-full text-white block rounded-md text-base font-semibold font-headingStyle">Registration Guidelines</span>
@@ -186,10 +198,16 @@
                     <span class="pl-8 pr-4 py-2 w-full text-white block rounded-md text-base font-semibold font-headingStyle">Programme</span>
                   </a>
                   <a class="flex item-center w-full" title="Speakers" href="/keynote_speakers.html">
-                    <span class="pl-8 pr-4 py-2 w-full text-white  block rounded-md text-base font-semibold font-headingStyle">Speakers</span>
+                    <span class="pl-8 pr-4 py-2 w-full text-white block rounded-md text-base font-semibold font-headingStyle">Speakers</span>
+                  </a>
+                  <a class="flex item-center w-full" title="Speakers" href="/highlights.html">
+                    <span class="pl-8 pr-4 py-2 w-full text-white block rounded-md text-base font-semibold font-headingStyle">Highlights</span>
                   </a>
                   <a class="flex item-center w-full" title="Previous ADMA" href="/previous_adma.html">
-                    <span class="pl-8 pr-4 py-2 w-full text-white  block rounded-md text-base font-semibold font-headingStyle">Previous ADMA</span>
+                    <span class="pl-8 pr-4 py-2 w-full text-white block rounded-md text-base font-semibold font-headingStyle">Previous ADMA</span>
+                  </a>
+                  <a class="flex item-center w-full" title="more" onclick = 'mobile_menu_shift(0)'>
+                    <span class="pl-8 pr-4 py-2 w-full text-white block rounded-md text-base font-semibold font-headingStyle">Back...</span>
                   </a>
                 </div>
               </div>
