@@ -22,8 +22,8 @@ function get_paper_by_id()
                 's6': ['Multi-objective, Optimization, Augmentation, and Database - Dr. Taotao Cai', '3:30 P.M.', 'Tuesday 29/11/2022', 'Room 145'], 
                 's7': ['Data Mining Theory - Dr. Lin Yue', '10:30 A.M.', 'Tuesday 29/11/2022', 'Room 145'], 
                 's8': ['Finance and Healthcare - Prof. Xue Li / Prof. Gong Hao', '10:30 A.M.', 'Wednesday 30/11/2022', 'Room 146'], 
-                's9': ['Web and IoT Applications - Assoc. Prof. Jiaxin Li', '1:30 P.M.', 'Wednesday 30/11/2022', 'Room 145'], 
-                's10': ['On-device Application - Dr. Tony Chen', '3:30 P.M.', 'Wednesday 30/11/2022', 'Room 145'],
+                's9': ['Web and IoT Applications - Assoc. Prof. Jianxin Li', '1:30 P.M.', 'Wednesday 30/11/2022', 'Room 145'], 
+                's10': ['On-device Application - Dr. Tony Weitong Chen', '3:30 P.M.', 'Wednesday 30/11/2022', 'Room 145'],
                 's11': ['Data Mining Application - A/Prof. Hongzhi Yin', '3:30 P.M.', 'Wednesday 30/11/2022', 'Room 146']};
 
     // sessions = {'s1': ['Pattern Mining - Dr. Guangdong Bai', '<i style = "color: grey;">TBA</i>', '<i style = "color: grey;">TBA</i>', 'Room 145'], 
@@ -84,7 +84,7 @@ function get_paper_by_id()
 
     if (Object.keys(paper_id).includes(id))
     {
-        element = document.getElementById('info');
+        element = document.getElementById('info_tb');
         element.className = '';
         Previous_pid = document.getElementById('previous_pid');
         previous_pid = Previous_pid.innerHTML;
